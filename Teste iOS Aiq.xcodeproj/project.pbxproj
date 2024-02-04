@@ -15,12 +15,13 @@
 		5E02D2822B6EBE4D004A003E /* Teste_iOS_AiqTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E02D2812B6EBE4D004A003E /* Teste_iOS_AiqTests.swift */; };
 		5E02D28C2B6EBE4D004A003E /* Teste_iOS_AiqUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E02D28B2B6EBE4D004A003E /* Teste_iOS_AiqUITests.swift */; };
 		5E02D28E2B6EBE4D004A003E /* Teste_iOS_AiqUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E02D28D2B6EBE4D004A003E /* Teste_iOS_AiqUITestsLaunchTests.swift */; };
-		5E02D2A12B6EE54B004A003E /* OrderItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E02D2A02B6EE54B004A003E /* OrderItemViewModel.swift */; };
+		5E02D2A12B6EE54B004A003E /* OrderItemVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E02D2A02B6EE54B004A003E /* OrderItemVM.swift */; };
 		5E02D2A32B6EE8B3004A003E /* OrderItemForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E02D2A22B6EE8B3004A003E /* OrderItemForm.swift */; };
 		5E02D2A62B6EF8F2004A003E /* DoubleExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E02D2A52B6EF8F2004A003E /* DoubleExtensions.swift */; };
 		5E02D2AC2B6EFA48004A003E /* OrderItemFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E02D2AB2B6EFA48004A003E /* OrderItemFormViewController.swift */; };
 		5E02D2AF2B6EFA8E004A003E /* OrderItemFormField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E02D2AE2B6EFA8E004A003E /* OrderItemFormField.swift */; };
 		5E02D2B12B6F1663004A003E /* OrderItemFormFieldOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E02D2B02B6F1663004A003E /* OrderItemFormFieldOption.swift */; };
+		5E02D2E92B6F3DF7004A003E /* OrderItemFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E02D2E82B6F3DF7004A003E /* OrderItemFormView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,12 +54,13 @@
 		5E02D2872B6EBE4D004A003E /* Teste iOS AiqUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Teste iOS AiqUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E02D28B2B6EBE4D004A003E /* Teste_iOS_AiqUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Teste_iOS_AiqUITests.swift; sourceTree = "<group>"; };
 		5E02D28D2B6EBE4D004A003E /* Teste_iOS_AiqUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Teste_iOS_AiqUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		5E02D2A02B6EE54B004A003E /* OrderItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderItemViewModel.swift; sourceTree = "<group>"; };
+		5E02D2A02B6EE54B004A003E /* OrderItemVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderItemVM.swift; sourceTree = "<group>"; };
 		5E02D2A22B6EE8B3004A003E /* OrderItemForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderItemForm.swift; sourceTree = "<group>"; };
 		5E02D2A52B6EF8F2004A003E /* DoubleExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubleExtensions.swift; sourceTree = "<group>"; };
 		5E02D2AB2B6EFA48004A003E /* OrderItemFormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderItemFormViewController.swift; sourceTree = "<group>"; };
 		5E02D2AE2B6EFA8E004A003E /* OrderItemFormField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderItemFormField.swift; sourceTree = "<group>"; };
 		5E02D2B02B6F1663004A003E /* OrderItemFormFieldOption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderItemFormFieldOption.swift; sourceTree = "<group>"; };
+		5E02D2E82B6F3DF7004A003E /* OrderItemFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderItemFormView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,8 +144,9 @@
 			isa = PBXGroup;
 			children = (
 				5E02D2AD2B6EFA7E004A003E /* Models */,
-				5E02D2A02B6EE54B004A003E /* OrderItemViewModel.swift */,
 				5E02D2AB2B6EFA48004A003E /* OrderItemFormViewController.swift */,
+				5E02D2E82B6F3DF7004A003E /* OrderItemFormView.swift */,
+				5E02D2A02B6EE54B004A003E /* OrderItemVM.swift */,
 			);
 			path = OrderItem;
 			sourceTree = "<group>";
@@ -300,11 +303,12 @@
 				5E02D2B12B6F1663004A003E /* OrderItemFormFieldOption.swift in Sources */,
 				5E02D2AC2B6EFA48004A003E /* OrderItemFormViewController.swift in Sources */,
 				5E02D26F2B6EBE4B004A003E /* Teste_iOS_AiqFlowController.swift in Sources */,
+				5E02D2E92B6F3DF7004A003E /* OrderItemFormView.swift in Sources */,
 				5E02D26B2B6EBE4B004A003E /* AppDelegate.swift in Sources */,
 				5E02D26D2B6EBE4B004A003E /* SceneDelegate.swift in Sources */,
 				5E02D2A62B6EF8F2004A003E /* DoubleExtensions.swift in Sources */,
 				5E02D2AF2B6EFA8E004A003E /* OrderItemFormField.swift in Sources */,
-				5E02D2A12B6EE54B004A003E /* OrderItemViewModel.swift in Sources */,
+				5E02D2A12B6EE54B004A003E /* OrderItemVM.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -5,11 +5,15 @@
 //  Created by Bruno Thuma on 03/02/24.
 //
 
+import UIKit
+
 struct OrderItemForm {
     let id: Int
     let title: String
     let description: String
     let initialPrice: Double
-    let totalPrice: Double
+    let totalPrice: Double?
+    let itemImage: UIImage
     let formFields: [OrderItemFormField]
+    
 }

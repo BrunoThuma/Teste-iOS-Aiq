@@ -35,8 +35,8 @@ Quando um PR é mergeado da `dev` na `main` uma nova tag de versão será gerada
 Para mais informações consultar o [manual oficial do gitflow](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow#:~:text=What%20is%20Gitflow%3F,lived%20branches%20and%20larger%20commits.).
 
 ## Andamento
-- [ ] Divisão das pastas para MVVM
-- [ ] Definição do modelo de dados
+- [x] Divisão das pastas para MVVM
+- [x] Definição do modelo de dados
 - [ ] Contrução basica da tela
   - [ ] TableView diferenciando cada tipo de campo
   - [ ] Header com Endereço de destino, imagem e infos do item
@@ -46,7 +46,7 @@ Para mais informações consultar o [manual oficial do gitflow](https://www.atla
   - [ ] Seleção multipla
   - [ ] Multiplas unidades
 - [ ] Importar assets
-  - [ ] Imagem item cardapio
+  - [x] Imagem item cardapio
   - [ ] Fontes
   - [ ] Icones (AiqFome, Perfil, GeoPin, Dolar, Lixeira)
   - [ ] Cores
