@@ -54,3 +54,8 @@ Para mais informações consultar o [manual oficial do gitflow](https://www.atla
   - [ ] Alterar valor do total do pedido
   - [ ] Habilitar adicionar pedido repetido
   - [ ] Habilitar botão "ver ticket"
+
+## Aprendizados
+No MVVM a View tem o papel de cuidar de qualquer interação com o usuario, deixando para a ViewModel qualquer calculo ou recuperação de dados. Isso implica que normalmente temos uma ViewController e uma View, seja em forma de ViewCode ou Storyboard
+
+O coordinator pode receber e injetar, atraves de seus métodos Delegate, as dependencias e dados necessarios a cada módulo.
