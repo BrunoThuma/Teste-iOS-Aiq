@@ -49,7 +49,7 @@ Para mais informações consultar o [manual oficial do gitflow](https://www.atla
   - [x] Imagem item cardapio
   - [ ] Fontes
   - [ ] Icones (AiqFome, Perfil, GeoPin, Dolar, Lixeira)
-  - [ ] Cores
+  - [x] Cores
 - [ ] Criar interações para tela dinâmica
   - [ ] Alterar valor do total do pedido
   - [ ] Habilitar adicionar pedido repetido

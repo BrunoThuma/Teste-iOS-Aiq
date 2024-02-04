@@ -7,19 +7,23 @@
 
 import UIKit
 
+protocol OrderItemFormViewDelegate: AnyObject {
+    
+}
+
 class OrderItemFormView: UIView {
     
     lazy var label: UILabel = .init()
+    weak var controllerDelegate: OrderItemFormViewDelegate!
 
     override func layoutSubviews() {
         super.layoutSubviews()
         
-        self.backgroundColor = .purple
+        self.backgroundColor = .AiqColors.formNavBarBgPurple
         
-        label.text = "Hello, World!"
+        label.text = "Oi mundo!"
         label.font = .systemFont(ofSize: 20)
-        label.textColor = .gray
-        label.backgroundColor = .black
+        label.textColor = .AiqColors.formPromosGreen
         label.textAlignment = .center
         
         label.translatesAutoresizingMaskIntoConstraints = false
