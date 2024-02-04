@@ -12,7 +12,4 @@ struct OrderItemForm {
     let initialPrice: Double
     let totalPrice: Double
     let formFields: [OrderItemFormField]
-    
-    
-    
 }

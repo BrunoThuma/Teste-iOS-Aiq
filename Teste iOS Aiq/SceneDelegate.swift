@@ -20,13 +20,13 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         guard let windowScene = (scene as? UIWindowScene) else { return }
         
-        let window = UIWindow(windowScene: windowScene)
+        window = UIWindow(windowScene: windowScene)
         
         flowController = TesteiOSAiqFlowController()
         let rootViewController = flowController?.start()
         
-        window.rootViewController = rootViewController
-        window.makeKeyAndVisible()
+        window!.rootViewController = rootViewController
+        window!.makeKeyAndVisible()
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

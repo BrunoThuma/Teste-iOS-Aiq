@@ -13,7 +13,7 @@ class TesteiOSAiqFlowController {
     public init() { }
     
     func start() -> UINavigationController? {
-        self.navigationController = UINavigationController(rootViewController: OrderAssemblyViewModel())
+        self.navigationController = UINavigationController(rootViewController: OrderItemFormViewController())
         return self.navigationController
     }
 

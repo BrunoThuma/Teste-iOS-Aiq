@@ -7,14 +7,7 @@
 
 import UIKit
 
-class OrderAssemblyViewModel: UIViewController {
+class OrderItemViewModel {
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        self.view.backgroundColor = .purple
-        
-        print("\(2.1.priceDescription) success")
-        
-    }
+    
 }
