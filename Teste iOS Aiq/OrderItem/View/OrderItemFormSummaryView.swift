@@ -1,5 +1,5 @@
 //
-//  OrderItemFormTitleView.swift
+//  OrderItemFormSummaryView.swift
 //  Teste iOS Aiq
 //
 //  Created by Bruno Thuma on 05/02/24.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class OrderItemFormTitleView: UIView {
+class OrderItemFormSummaryView: UIView {
     
     private let summaryColors = UIColor.AiqColors.OrderItemForm.Summary.self
 

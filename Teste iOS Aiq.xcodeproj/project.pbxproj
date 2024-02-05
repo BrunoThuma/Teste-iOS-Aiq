@@ -43,7 +43,7 @@
 		5E02D3142B702350004A003E /* Nunito-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5E02D3042B702350004A003E /* Nunito-Light.ttf */; };
 		5E02D3152B702350004A003E /* Nunito-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5E02D3052B702350004A003E /* Nunito-LightItalic.ttf */; };
 		5E02D3172B709AB9004A003E /* AiqConstraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E02D3162B709AB9004A003E /* AiqConstraints.swift */; };
-		5E02D3192B70A145004A003E /* OrderItemFormTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E02D3182B70A145004A003E /* OrderItemFormTitleView.swift */; };
+		5E02D3192B70A145004A003E /* OrderItemFormSummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E02D3182B70A145004A003E /* OrderItemFormSummaryView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -104,7 +104,7 @@
 		5E02D3042B702350004A003E /* Nunito-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-Light.ttf"; sourceTree = "<group>"; };
 		5E02D3052B702350004A003E /* Nunito-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-LightItalic.ttf"; sourceTree = "<group>"; };
 		5E02D3162B709AB9004A003E /* AiqConstraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AiqConstraints.swift; sourceTree = "<group>"; };
-		5E02D3182B70A145004A003E /* OrderItemFormTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderItemFormTitleView.swift; sourceTree = "<group>"; };
+		5E02D3182B70A145004A003E /* OrderItemFormSummaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderItemFormSummaryView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -221,7 +221,7 @@
 			isa = PBXGroup;
 			children = (
 				5E02D2E82B6F3DF7004A003E /* OrderItemFormView.swift */,
-				5E02D3182B70A145004A003E /* OrderItemFormTitleView.swift */,
+				5E02D3182B70A145004A003E /* OrderItemFormSummaryView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -418,7 +418,7 @@
 				5E02D26D2B6EBE4B004A003E /* SceneDelegate.swift in Sources */,
 				5E02D2A62B6EF8F2004A003E /* DoubleExtensions.swift in Sources */,
 				5E02D3172B709AB9004A003E /* AiqConstraints.swift in Sources */,
-				5E02D3192B70A145004A003E /* OrderItemFormTitleView.swift in Sources */,
+				5E02D3192B70A145004A003E /* OrderItemFormSummaryView.swift in Sources */,
 				5E02D2AF2B6EFA8E004A003E /* OrderItemFormField.swift in Sources */,
 				5E02D2A12B6EE54B004A003E /* OrderItemFormViewModel.swift in Sources */,
 			);

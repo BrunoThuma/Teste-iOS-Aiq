@@ -15,8 +15,8 @@ class OrderItemFormView: UIView {
     
     weak var controllerDelegate: OrderItemFormViewDelegate!
     
-    lazy var formTitleView: OrderItemFormTitleView = {
-        let titleView = OrderItemFormTitleView()
+    lazy var formTitleView: OrderItemFormSummaryView = {
+        let titleView = OrderItemFormSummaryView()
         titleView.translatesAutoresizingMaskIntoConstraints = false
         return titleView
     }()
