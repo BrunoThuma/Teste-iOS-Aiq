@@ -8,7 +8,7 @@
 extension Double {
     var priceDescription: String {
         get {
-            "R$ " + self.description.replacingOccurrences(of: ".", with: ",")
+            String(format: "R$ %.02f", self).replacingOccurrences(of: ".", with: ",")
         }
     }
 }

@@ -30,7 +30,7 @@ class OrderItemFormViewController: UIViewController {
         
         view.titleLabel.text = viewModel.getFormInfo().title
         view.itemImageView.image = viewModel.getFormInfo().itemImage
-        view.originalPriceLabel.text = viewModel.form?.initialPrice.description
+        view.initialPriceValueLabel.text = viewModel.form?.initialPrice.description
         
     }
     

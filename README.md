@@ -47,7 +47,7 @@ Para mais informações consultar o [manual oficial do gitflow](https://www.atla
   - [ ] Multiplas unidades
 - [ ] Importar assets
   - [x] Imagem item cardapio
-  - [ ] Fontes
+  - [x] Fontes
   - [ ] Icones (AiqFome, Perfil, GeoPin, Dolar, Lixeira)
   - [x] Cores
 - [ ] Criar interações para tela dinâmica
