@@ -34,7 +34,14 @@ enum AiqFonts {
             static let blockedBold14 = UIFont(name: "Nunito-Bold", size: 14)
         }
         enum Customization {
-            
+            static let cellTitleBold16 = UIFont(name: "Nunito-Bold", size: 16)
+            static let cellDescriptionBold12 = UIFont(name: "Nunito-Bold", size: 12)
+            static let optionUnselectedRegular14 = UIFont(name: "Nunito", size: 14)
+            static let optionSelectedBold14 = UIFont(name: "Nunito", size: 14)
+            static let optionOriginalPriceBold12 = UIFont(name: "Nunito-Bold", size: 12)
+            static let optionPromoPriceBold14 = UIFont(name: "Nunito-Bold", size: 14)
+            static let optionPriceBold14 = UIFont(name: "Nunito-Bold", size: 14)
+            static let optionQuantityBold14 = UIFont(name: "Nunito-Bold", size: 14)
         }
     }
 }

@@ -1,0 +1,82 @@
+{
+    "id": 1,
+    "title": "Ceviche de salmão",
+    "description": "salmão temperado com limão, cebola e pimenta",
+    "initialPrice": 19.90,
+    "itemImageName": "Ceviche.png",
+    "formFields": [
+        {
+        "type": 1,
+        "title":"qual o tamanho?",
+        "description": "escolha 1",
+        "isRequired": true,
+        "options": [
+            {
+            "title": "médio",
+            "price": 22.90,
+            "isPromotional": true,
+            "promotionalPrice": 19.90
+            },
+            {
+            "title": "médio",
+            "price": 22.90,
+            "isPromotional": true,
+            "promotionalPrice": 19.90
+            }
+        ]},
+        {
+        "type": 2,
+        "title": "vai querer bebida?",
+        "description": "escolha quantos quiser",
+        "isRequired": false,
+        "options": [
+            {
+            "title": "coca-cola",
+            "price": 5,
+            "isPromotional": false
+            },
+            {
+            "title": "suco prats laranja",
+            "price": 6,
+            "isPromotional": false
+            },
+            {
+            "title": "água sem gás",
+            "price": 3,
+            "isPromotional": false
+            }
+        ]},
+        {
+        "type": 1,
+        "title": "precisa de talher?",
+        "description": "escolha até 1",
+        "isRequired": false,
+        "options": [
+            {
+            "title": "hashi",
+            "isPromotional": false
+            },
+            {
+            "title": "garfo e faca descartável",
+            "price": 1,
+            "isPromotional": false
+            }
+        ]},
+        {
+        "type": 3,
+        "title": "mais alguma coisa?",
+        "description": "escolha até 2",
+        "isRequired": false,
+        "options": [
+            {
+            "title": "biscoito da sorte",
+            "price": 2,
+            "isPromotional": false
+            },
+            {
+            "title": "rolinho primavera",
+            "price": 8,
+            "isPromotional": false
+            }
+        ]}
+    ]}

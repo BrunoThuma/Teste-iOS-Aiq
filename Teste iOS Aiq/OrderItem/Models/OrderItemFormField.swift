@@ -5,7 +5,7 @@
 //  Created by Bruno Thuma on 03/02/24.
 //
 
-struct OrderItemFormField {
+struct OrderItemFormField: Codable {
     let type: OrderItemFormFieldType
     let title: String
     let description: String
@@ -13,8 +13,8 @@ struct OrderItemFormField {
     let options: [OrderItemFormFieldOption]
 }
 
-enum OrderItemFormFieldType {
-    case singleChoice
+enum OrderItemFormFieldType: Int, Codable {
+    case singleChoice = 1
     case multipleChoice
     case multipleItems
 }

@@ -9,6 +9,7 @@ Teste tecnico para vaga de desenvolvedor iOS Pleno do AiqFome.
 - [Arquitetura](#Arquitetura)
 - [Contribuição](#Contribuição)
 - [Andamento](#Andamento)
+- [Aprendizados](#Aprendizados)
 
 ## Objetivo
 Implementar uma aplicação para iOS com a tela de montagem de item de pedido utilizando como base o material passado no [link do figma](https://www.figma.com/file/mgLRWavLkkZnDTVKOKQPie/%5Baiqfome%5D-teste-front-end---MOBILE?type=design&node-id=1182-2552&mode=design&t=hLpbk0QAIZfqprC4-0)
@@ -39,7 +40,9 @@ Para mais informações consultar o [manual oficial do gitflow](https://www.atla
 - [x] Definição do modelo de dados
 - [ ] Contrução basica da tela
   - [x] TableView diferenciando cada tipo de campo
-  - [ ] Header com Endereço de destino, imagem e infos do item
+  - [ ] Header com Endereço de destino, 
+  - [x] Sumário com imagem e infos do item
+  - [x] View com total e quantidade
   - [ ] Footer com TextField para observações e botão de finalizar
 - [ ] Contrução da celula de cada tipo de campo 
   - [ ] Seleção unica
@@ -54,8 +57,23 @@ Para mais informações consultar o [manual oficial do gitflow](https://www.atla
   - [ ] Alterar valor do total do pedido
   - [ ] Habilitar adicionar pedido repetido
   - [ ] Habilitar botão "ver ticket"
+  - [ ] Criar modelo das opções salvas pelo usuario (OrderItemData?)
+- [ ] Melhorias
+  - [ ] Criar métodos que poder levantar exceções
+  - [ ] Tratar exceções
+  - [ ] Padronizar nomes dos arquivos e variaveis
+- [ ] Bugs
+  - [ ] Constraints quebrando na `OrderItemFormView`
+  - [ ] TableView do form n aparece
 
 ## Aprendizados
 No MVVM a View tem o papel de cuidar de qualquer interação com o usuario, deixando para a ViewModel qualquer calculo ou recuperação de dados. Isso implica que normalmente temos uma ViewController e uma View, seja em forma de ViewCode ou Storyboard
 
-O coordinator pode receber e injetar, atraves de seus métodos Delegate, as dependencias e dados necessarios a cada módulo.
+O coordinator pode receber e injetar, atraves de seus métodos Delegate, as dependencias e dados necessarios a cada módulo. [Link ref](https://www.youtube.com/watch?v=DjPNdQBazHM&ab_channel=Swiftparatodos)
+
+Formas mais convenientes de implementar TableViews para formulários [Link ref](https://nimblehq.co/blog/better-form-architecture-for-ios-applications)
+
+## Ideias 
+Talvez o formulário inteiro possa ser representado como uma unica lista, no caso teriamos as primeiras duas celulas sendo a imagem e os dados do formulário. Isso facilita a representação na UI, mas pode ser dificil de assimilar com a representação do modelo que a API responderia.
+
+Implementar telas em SwiftUI. Aproveitar o baixo acoplamento com a View que o MVVM oferece e criar as telas usando SwiftUI, uma tecnologia mais recente, com alguns pontos favoraveis para a tela pedida.

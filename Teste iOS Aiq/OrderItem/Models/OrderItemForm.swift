@@ -7,13 +7,11 @@
 
 import UIKit
 
-struct OrderItemForm {
+struct OrderItemForm: Codable {
     let id: Int
     let title: String
     let description: String
     let initialPrice: Double
-    let totalPrice: Double?
-    let itemImage: UIImage
+    let itemImageName: String
     let formFields: [OrderItemFormField]
-    
 }

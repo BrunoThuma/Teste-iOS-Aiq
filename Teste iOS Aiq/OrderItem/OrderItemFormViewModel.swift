@@ -25,111 +25,25 @@ class MockedOrderItemVM: OrderItemVMProtocol {
     var form: OrderItemForm?
     weak var controllerDelegate: OrderItemFormVMDelegate!
     
-    // TODO: Should throw
-    func getFormInfo() -> OrderItemForm {
-        if let form {
-            return form
-        } else {
-            loadModel()
-            return form!
-        }
-    }
+    var service: OrderItemFormServiceProtocol
     
-    // TODO: Should throw
-    func getFormTableData() -> [OrderItemFormField] {
-        if let form {
-            return form.formFields
-        } else {
-            loadModel()
-            return form!.formFields
-        }
+    init(service: OrderItemFormServiceProtocol) {
+        self.service = service
     }
     
     // TODO: Should throw
     func loadModel() {
-        self.form = OrderItemForm(
-            id: 1,
-            title: "Ceviche de salmão",
-            description: "salmão temperado com limão, cebola e pimenta",
-            initialPrice: 19.90,
-            totalPrice: nil,
-            itemImage: UIImage(named: "Ceviche.png")!,
-            formFields: [
-                OrderItemFormField(
-                    type: .singleChoice,
-                    title: "qual o tamanho?",
-                    description: "escolha 1",
-                    isRequired: true,
-                    options: [
-                        OrderItemFormFieldOption(
-                            title: "médio",
-                            price: 22.90,
-                            isPromotional: true,
-                            promotionalPrice: 19.90
-                        ),
-                        OrderItemFormFieldOption(
-                            title: "grade",
-                            price: 28.90,
-                            isPromotional: false
-                        ),
-                    ]),
-                OrderItemFormField(
-                    type: .multipleItems,
-                    title: "vai querer bebida?",
-                    description: "escolha quantos quiser",
-                    isRequired: false,
-                    options: [
-                        OrderItemFormFieldOption(
-                            title: "coca-cola",
-                            price: 5,
-                            isPromotional: false
-                        ),
-                        OrderItemFormFieldOption(
-                            title: "suco prats laranja",
-                            price: 6,
-                            isPromotional: false
-                        ),
-                        OrderItemFormFieldOption(
-                            title: "água sem gás",
-                            price: 3,
-                            isPromotional: false
-                        ),
-                    ]),
-                OrderItemFormField(
-                    type: .singleChoice,
-                    title: "precisa de talher?",
-                    description: "escolha até 1",
-                    isRequired: false,
-                    options: [
-                        OrderItemFormFieldOption(
-                            title: "hashi",
-                            isPromotional: false
-                        ),
-                        OrderItemFormFieldOption(
-                            title: "garfo e faca descartável",
-                            price: 1,
-                            isPromotional: false
-                        ),
-                    ]),
-                OrderItemFormField(
-                    type: .multipleChoice,
-                    title: "mais alguma coisa?",
-                    description: "escolha até 2",
-                    isRequired: false,
-                    options: [
-                        OrderItemFormFieldOption(
-                            title: "biscoito da sorte",
-                            price: 2,
-                            isPromotional: false
-                        ),
-                        OrderItemFormFieldOption(
-                            title: "rolinho primavera",
-                            price: 8,
-                            isPromotional: false
-                        )
-                    ]),
-            ])
-        
-        controllerDelegate.didGetForm()
+        service.fetchForm(completion: handleResult)
+    }
+    
+    // TODO: Should throw
+    func handleResult(_ result: Result<OrderItemForm, Error>) {
+        switch result {
+        case .success(let orderForm):
+            self.form = orderForm
+            controllerDelegate.didGetForm()
+        case .failure(let error):
+            controllerDelegate.didGetError(error: error.localizedDescription)
+        }
     }
 }
