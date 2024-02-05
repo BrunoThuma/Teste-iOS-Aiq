@@ -13,7 +13,12 @@ class OrderItemFormViewController: UIViewController {
     
     init(viewModel: OrderItemVMProtocol) {
         self.viewModel = viewModel
+        
         super.init(nibName: nil, bundle: nil)
+        
+        viewModel.controllerDelegate = self
+        
+        viewModel.loadModel()
     }
     
     required init?(coder: NSCoder) {
@@ -22,26 +27,61 @@ class OrderItemFormViewController: UIViewController {
     
     override func loadView() {
         super.loadView()
+        
+        let fominhaImage = UIImage(named: "icon roxo.svg")?.withTintColor(.white, renderingMode: .alwaysOriginal)
+        self.navigationItem.leftBarButtonItem = .init(image: fominhaImage, style: .plain, target: nil, action: nil)
+        
+//        self.navigationItem.titleView = OrderItemFormTitleView()
+        
+        
         view = OrderItemFormView()
+        guard let view = view as? OrderItemFormView else { return }
+        
+        view.formTitleView.titleLabel.text = viewModel.form?.title
+        view.formTitleView.itemImageView.image = viewModel.form?.itemImage
+        view.formTitleView.initialPriceValueLabel.text = viewModel.form?.initialPrice.priceDescription
+        view.formTitleView.descriptionLabel.text = viewModel.form?.description
+        view.formFieldsTableView.dataSource = self
+        
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        print("\(Double.random(in: (0...100.0)).priceDescription) success")
     }
 
 }
 
+extension OrderItemFormViewController: OrderItemFormVMDelegate {
+    
+    func didGetForm() {
+        guard let view = view as? OrderItemFormView else { return }
+        view.formFieldsTableView.reloadData()
+    }
+    
+    func didGetError(error: String) {
+        print("Got error")
+    }
+}
+
 extension OrderItemFormViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return viewModel.getFormTableData().count
+        return viewModel.form!.formFields.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
-        let formField = self.viewModel.getFormTableData()[indexPath.row]
-        cell.textLabel!.text = formField.title
+        let cell = tableView.dequeueReusableCell(withIdentifier: "FormCell", for: indexPath)
+        let formField = self.viewModel.form!.formFields[indexPath.row]
+        var typeMessage: String = ""
+        switch formField.type {
+        case .singleChoice:
+            typeMessage = "singleChoice"
+        case .multipleChoice:
+            typeMessage = "multipleChoice"
+        case .multipleItems:
+            typeMessage = "multipleItems"
+        }
+        
+        cell.textLabel!.text = formField.title + typeMessage
         return cell
     }
     

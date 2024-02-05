@@ -1,5 +1,5 @@
 //
-//  OrderItemVM.swift
+//  OrderItemFormViewModel.swift
 //  Teste iOS Aiq
 //
 //  Created by Bruno Thuma on 03/02/24.
@@ -11,9 +11,9 @@ protocol OrderItemVMProtocol: AnyObject {
     /// Talvez nao seja o melhor jeito de disponibilizar o dado para a VC
     /// Talvez guardar infos do form e dados da lista separados?
     var form: OrderItemForm? { get }
+    var controllerDelegate: OrderItemFormVMDelegate! { get set }
     
-    func getFormInfo() -> OrderItemForm
-    func getFormTableData() -> [OrderItemFormField]
+    func loadModel()
 }
 
 protocol OrderItemFormVMDelegate: AnyObject {
@@ -22,7 +22,6 @@ protocol OrderItemFormVMDelegate: AnyObject {
 }
 
 class MockedOrderItemVM: OrderItemVMProtocol {
-    
     var form: OrderItemForm?
     weak var controllerDelegate: OrderItemFormVMDelegate!
     
@@ -31,7 +30,7 @@ class MockedOrderItemVM: OrderItemVMProtocol {
         if let form {
             return form
         } else {
-            loadForm()
+            loadModel()
             return form!
         }
     }
@@ -41,13 +40,13 @@ class MockedOrderItemVM: OrderItemVMProtocol {
         if let form {
             return form.formFields
         } else {
-            loadForm()
+            loadModel()
             return form!.formFields
         }
     }
     
     // TODO: Should throw
-    func loadForm() {
+    func loadModel() {
         self.form = OrderItemForm(
             id: 1,
             title: "Ceviche de salmão",
@@ -60,6 +59,7 @@ class MockedOrderItemVM: OrderItemVMProtocol {
                     type: .singleChoice,
                     title: "qual o tamanho?",
                     description: "escolha 1",
+                    isRequired: true,
                     options: [
                         OrderItemFormFieldOption(
                             title: "médio",
@@ -77,6 +77,7 @@ class MockedOrderItemVM: OrderItemVMProtocol {
                     type: .multipleItems,
                     title: "vai querer bebida?",
                     description: "escolha quantos quiser",
+                    isRequired: false,
                     options: [
                         OrderItemFormFieldOption(
                             title: "coca-cola",
@@ -98,6 +99,7 @@ class MockedOrderItemVM: OrderItemVMProtocol {
                     type: .singleChoice,
                     title: "precisa de talher?",
                     description: "escolha até 1",
+                    isRequired: false,
                     options: [
                         OrderItemFormFieldOption(
                             title: "hashi",
@@ -113,6 +115,7 @@ class MockedOrderItemVM: OrderItemVMProtocol {
                     type: .multipleChoice,
                     title: "mais alguma coisa?",
                     description: "escolha até 2",
+                    isRequired: false,
                     options: [
                         OrderItemFormFieldOption(
                             title: "biscoito da sorte",
