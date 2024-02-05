@@ -52,6 +52,16 @@ class OrderItemFormView: UIView {
 //        setupOnlyTableViewContraints()
     }
     
+    private func setupOnlyTableViewContraints() {
+        let tableViewConstraints = [
+            formFieldsTableView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: AiqConstraints.OrderItemForm.Top.standard),
+            formFieldsTableView.leadingAnchor.constraint(equalTo: leadingAnchor),
+            formFieldsTableView.bottomAnchor.constraint(equalTo: bottomAnchor),
+            formFieldsTableView.trailingAnchor.constraint(equalTo: trailingAnchor),
+        ]
+        NSLayoutConstraint.activate(tableViewConstraints)
+    }
+    
     // MARK: Private methods
     private func setupHierarchy() {
         self.addSubview(scrollView)
@@ -90,16 +100,6 @@ class OrderItemFormView: UIView {
             formFieldsTableView.widthAnchor.constraint(equalTo: scrollView.widthAnchor),
             formFieldsTableView.centerXAnchor.constraint(equalTo: scrollView.centerXAnchor),
             formFieldsTableView.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor),
-        ]
-        NSLayoutConstraint.activate(tableViewConstraints)
-    }
-    
-    private func setupOnlyTableViewContraints() {
-        let tableViewConstraints = [
-            formFieldsTableView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: AiqConstraints.OrderItemForm.Top.standard),
-            formFieldsTableView.leadingAnchor.constraint(equalTo: leadingAnchor),
-            formFieldsTableView.bottomAnchor.constraint(equalTo: bottomAnchor),
-            formFieldsTableView.trailingAnchor.constraint(equalTo: trailingAnchor),
         ]
         NSLayoutConstraint.activate(tableViewConstraints)
     }

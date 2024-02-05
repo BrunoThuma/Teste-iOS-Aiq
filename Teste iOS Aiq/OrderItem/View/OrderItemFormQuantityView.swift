@@ -10,11 +10,12 @@ import UIKit
 class OrderItemFormQuantityView: UIView {
     
     private let quantityColors = UIColor.AiqColors.OrderItemForm.Quantity.self
+    private let quantityFonts = AiqFonts.OrderItemForm.Quantity.self
     
     lazy var howManyLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.font = AiqFonts.OrderItemForm.Quantity.howManyBold16
+        label.font = quantityFonts.howManyBold16
         label.textColor = quantityColors.howManyTintBlack
         label.text = "quantos?"
         return label
@@ -22,14 +23,14 @@ class OrderItemFormQuantityView: UIView {
     lazy var totalPriceLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.font = AiqFonts.OrderItemForm.Quantity.totalPriceSemiBold14
+        label.font = quantityFonts.totalPriceSemiBold14
         label.textColor = quantityColors.totalPriceTintGray
         return label
     }()
     lazy var totalValueLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.font = AiqFonts.OrderItemForm.Quantity.totalValueBold14
+        label.font = quantityFonts.totalValueBold14
         label.textColor = quantityColors.totalValueTintBlack
         return label
     }()
@@ -54,7 +55,7 @@ class OrderItemFormQuantityView: UIView {
         button.translatesAutoresizingMaskIntoConstraints = false
         button.contentEdgeInsets = UIEdgeInsets(top: 11, left: 24, bottom: 10, right: 24)
         button.setTitle("adicionar", for: .normal)
-        button.titleLabel?.font = AiqFonts.OrderItemForm.Quantity.blockedBold14
+        button.titleLabel?.font = quantityFonts.blockedBold14
         button.tintColor = .white
         button.backgroundColor = quantityColors.blockedBgGray
         button.layer.cornerRadius = 8

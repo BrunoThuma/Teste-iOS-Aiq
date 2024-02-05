@@ -14,6 +14,7 @@ extension UIColor{
     }
     
     private enum FigmaColors {
+        static let neutrals900TextPrimary = UIColor(red: 32, green: 35, blue: 38)
         static let neutrals0white = UIColor(red: 255, green: 255, blue: 255)
         static let purple700Text = UIColor(red: 88, green: 15, blue: 120)
         static let purple500Brand = UIColor(red: 123, green: 31, blue: 162)
@@ -41,6 +42,13 @@ extension UIColor{
                 static let totalValueTintBlack = FigmaColors.neutrals700TextMedium
                 static let totalPriceTintGray = FigmaColors.neutrals700TextMedium
                 static let blockedBgGray = FigmaColors.neutrals500TextSecondary
+            }
+            enum Customization {
+                static let titleTintBlack = FigmaColors.neutrals900TextPrimary
+                static let descriptionTintGray = FigmaColors.neutrals500TextSecondary
+                static let optionNameTintGray = FigmaColors.neutrals500TextSecondary
+                static let optionActiveTintTeal = FigmaColors.teal400Brand
+                static let optionPromotionalTintGreen = FigmaColors.green500Success
             }
         }
     }

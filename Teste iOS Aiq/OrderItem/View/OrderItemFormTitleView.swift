@@ -8,16 +8,18 @@
 import UIKit
 
 class OrderItemFormTitleView: UIView {
+    private let headerFonts = AiqFonts.OrderItemForm.Header.self
+    private let headerColors = UIColor.AiqColors.OrderItemForm.Header.self
     
-    let deliverToLabel: UILabel = {
+    lazy var deliverToLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.font = AiqFonts.OrderItemForm.Header.deliverToBold14
-        label.textColor = .AiqColors.OrderItemForm.Header.deliverToTintPurple
+        label.font = headerFonts.deliverToBold14
+        label.textColor = headerColors.deliverToTintPurple
         label.text = "entregando em"
         return label
     }()
-    var addressLabel: UILabel = {
+    lazy var addressLabel: UILabel = {
         let label = UILabel()
         let image = UIImage(systemName: "chevron.right")?.withTintColor(.white, renderingMode: .alwaysOriginal)
         
@@ -29,7 +31,7 @@ class OrderItemFormTitleView: UIView {
         
         
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.font = AiqFonts.OrderItemForm.Header.addressBold16
+        label.font = headerFonts.addressBold16
         label.textColor = .white
         return label
     }()

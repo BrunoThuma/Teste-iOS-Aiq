@@ -3,4 +3,147 @@
    uuid = "55E0832D-E68C-4CD8-A15A-9458BA390099"
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "ABADA96B-2A30-454D-BB6F-A1D723A298FD"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Teste iOS Aiq/OrderItem/OrderItemFormViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "41"
+            endingLineNumber = "41"
+            landmarkName = "handleResult(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "ABADA96B-2A30-454D-BB6F-A1D723A298FD - b6b2d8f9cfed6a38"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Teste_iOS_Aiq.MockedOrderItemVM.handleResult(Swift.Result&lt;Teste_iOS_Aiq.OrderItemForm, Swift.Error&gt;) -&gt; ()"
+                  moduleName = "Teste iOS Aiq"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/brunothuma/pessoal/Teste%20iOS%20Aiq/Teste%20iOS%20Aiq/OrderItem/OrderItemFormViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "42"
+                  endingLineNumber = "42"
+                  offsetFromSymbolStart = "156">
+               </Location>
+               <Location
+                  uuid = "ABADA96B-2A30-454D-BB6F-A1D723A298FD - b6b2d8f9cfed6a38"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Teste_iOS_Aiq.MockedOrderItemVM.handleResult(Swift.Result&lt;Teste_iOS_Aiq.OrderItemForm, Swift.Error&gt;) -&gt; ()"
+                  moduleName = "Teste iOS Aiq"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/brunothuma/pessoal/Teste%20iOS%20Aiq/Teste%20iOS%20Aiq/OrderItem/OrderItemFormViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "42"
+                  endingLineNumber = "42"
+                  offsetFromSymbolStart = "176">
+               </Location>
+               <Location
+                  uuid = "ABADA96B-2A30-454D-BB6F-A1D723A298FD - b6b2d8f9cfed6a38"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Teste_iOS_Aiq.MockedOrderItemVM.handleResult(Swift.Result&lt;Teste_iOS_Aiq.OrderItemForm, Swift.Error&gt;) -&gt; ()"
+                  moduleName = "Teste iOS Aiq"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/brunothuma/pessoal/Teste%20iOS%20Aiq/Teste%20iOS%20Aiq/OrderItem/OrderItemFormViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "42"
+                  endingLineNumber = "42"
+                  offsetFromSymbolStart = "708">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "3E4808AD-C506-4541-9A9C-38DC3FE0CEAE"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Teste iOS Aiq/Service/MockOrderItemFormService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "12"
+            endingLineNumber = "12"
+            landmarkName = "fetchForm(completion:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "3E4808AD-C506-4541-9A9C-38DC3FE0CEAE - e25dff4809791ba3"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Teste_iOS_Aiq.MockOrderItemFormService.fetchForm(completion: (Swift.Result&lt;Teste_iOS_Aiq.OrderItemForm, Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "Teste iOS Aiq"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/brunothuma/pessoal/Teste%20iOS%20Aiq/Teste%20iOS%20Aiq/Service/MockOrderItemFormService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "12"
+                  endingLineNumber = "12"
+                  offsetFromSymbolStart = "232">
+               </Location>
+               <Location
+                  uuid = "3E4808AD-C506-4541-9A9C-38DC3FE0CEAE - e25dff4809791ba3"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Teste_iOS_Aiq.MockOrderItemFormService.fetchForm(completion: (Swift.Result&lt;Teste_iOS_Aiq.OrderItemForm, Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "Teste iOS Aiq"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/brunothuma/pessoal/Teste%20iOS%20Aiq/Teste%20iOS%20Aiq/Service/MockOrderItemFormService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "12"
+                  endingLineNumber = "12"
+                  offsetFromSymbolStart = "632">
+               </Location>
+               <Location
+                  uuid = "3E4808AD-C506-4541-9A9C-38DC3FE0CEAE - e25dff4809791ba3"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Teste_iOS_Aiq.MockOrderItemFormService.fetchForm(completion: (Swift.Result&lt;Teste_iOS_Aiq.OrderItemForm, Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "Teste iOS Aiq"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/brunothuma/pessoal/Teste%20iOS%20Aiq/Teste%20iOS%20Aiq/Service/MockOrderItemFormService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "12"
+                  endingLineNumber = "12"
+                  offsetFromSymbolStart = "244">
+               </Location>
+               <Location
+                  uuid = "3E4808AD-C506-4541-9A9C-38DC3FE0CEAE - e25dff4809791ba3"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Teste_iOS_Aiq.MockOrderItemFormService.fetchForm(completion: (Swift.Result&lt;Teste_iOS_Aiq.OrderItemForm, Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "Teste iOS Aiq"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/brunothuma/pessoal/Teste%20iOS%20Aiq/Teste%20iOS%20Aiq/Service/MockOrderItemFormService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "12"
+                  endingLineNumber = "12"
+                  offsetFromSymbolStart = "640">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

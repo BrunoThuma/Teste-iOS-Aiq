@@ -10,6 +10,7 @@ import UIKit
 class OrderItemFormSummaryView: UIView {
     
     private let summaryColors = UIColor.AiqColors.OrderItemForm.Summary.self
+    private let summaryFonts = AiqFonts.OrderItemForm.Summary.self
 
     // MARK: UI attributes
     lazy var itemImageView: UIImageView = {
@@ -22,7 +23,7 @@ class OrderItemFormSummaryView: UIView {
     lazy var titleLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.font = .AiqFonts.formTitleBold20
+        label.font = summaryFonts.titleBold20
         label.textColor = summaryColors.titleTintBlack
         label.textAlignment = .left
         return label
@@ -31,14 +32,14 @@ class OrderItemFormSummaryView: UIView {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.text = "a partir de"
-        label.font = .AiqFonts.formInitialPriceExtraBold14
+        label.font = summaryFonts.priceExtraBold14
         label.textColor = summaryColors.initialPriceTintGray
         return label
     }()
     lazy var initialPriceValueLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.font = .AiqFonts.formInitialPriceExtraBold18
+        label.font = summaryFonts.priceExtraBold18
         label.textColor = summaryColors.initialPriceValueTintPurple
         label.textAlignment = .left
         return label
@@ -54,7 +55,7 @@ class OrderItemFormSummaryView: UIView {
     lazy var descriptionLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.font = AiqFonts.OrderItemForm.Summary.description14
+        label.font = summaryFonts.description14
         label.textColor = summaryColors.descriptionTintGray
         return label
     }()
