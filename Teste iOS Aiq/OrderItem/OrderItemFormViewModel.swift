@@ -1,5 +1,5 @@
 //
-//  OrderItemVM.swift
+//  OrderItemFormViewModel.swift
 //  Teste iOS Aiq
 //
 //  Created by Bruno Thuma on 03/02/24.
@@ -11,6 +11,7 @@ protocol OrderItemVMProtocol: AnyObject {
     /// Talvez nao seja o melhor jeito de disponibilizar o dado para a VC
     /// Talvez guardar infos do form e dados da lista separados?
     var form: OrderItemForm? { get }
+    var controllerDelegate: OrderItemFormVMDelegate! { get set }
     
     func getFormInfo() -> OrderItemForm
     func getFormTableData() -> [OrderItemFormField]
@@ -22,7 +23,6 @@ protocol OrderItemFormVMDelegate: AnyObject {
 }
 
 class MockedOrderItemVM: OrderItemVMProtocol {
-    
     var form: OrderItemForm?
     weak var controllerDelegate: OrderItemFormVMDelegate!
     

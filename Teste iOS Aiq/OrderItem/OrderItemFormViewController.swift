@@ -13,7 +13,10 @@ class OrderItemFormViewController: UIViewController {
     
     init(viewModel: OrderItemVMProtocol) {
         self.viewModel = viewModel
+        
         super.init(nibName: nil, bundle: nil)
+        
+        viewModel.controllerDelegate = self
     }
     
     required init?(coder: NSCoder) {
@@ -23,6 +26,12 @@ class OrderItemFormViewController: UIViewController {
     override func loadView() {
         super.loadView()
         view = OrderItemFormView()
+        guard let view = view as? OrderItemFormView else { return }
+        
+        view.titleLabel.text = viewModel.getFormInfo().title
+        view.itemImageView.image = viewModel.getFormInfo().itemImage
+        view.originalPriceLabel.text = viewModel.form?.initialPrice.description
+        
     }
     
     override func viewDidLoad() {
@@ -31,6 +40,17 @@ class OrderItemFormViewController: UIViewController {
         print("\(Double.random(in: (0...100.0)).priceDescription) success")
     }
 
+}
+
+extension OrderItemFormViewController: OrderItemFormVMDelegate {
+    
+    func didGetForm() {
+        print("Got form")
+    }
+    
+    func didGetError(error: String) {
+        print("Got error")
+    }
 }
 
 extension OrderItemFormViewController: UITableViewDataSource {
