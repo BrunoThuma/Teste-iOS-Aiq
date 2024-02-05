@@ -46,7 +46,7 @@ class OrderItemFormSummaryView: UIView {
     lazy var initialPriceStack: UIStackView = {
         let stack = UIStackView()
         stack.translatesAutoresizingMaskIntoConstraints = false
-        stack.axis  = .horizontal
+        stack.axis = .horizontal
         stack.alignment = .bottom
         stack.spacing = 10
         return stack
@@ -88,21 +88,21 @@ class OrderItemFormSummaryView: UIView {
         
         let titleLabelConstraints = [
             titleLabel.topAnchor.constraint(equalTo: itemImageView.bottomAnchor, constant: 16),
-            titleLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: AiqConstraints.Leading.standard),
-            titleLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: AiqConstraints.Trailing.standard),
+            titleLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: AiqConstraints.OrderItemForm.Leading.standard),
+            titleLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: AiqConstraints.OrderItemForm.Trailing.standard),
         ]
         NSLayoutConstraint.activate(titleLabelConstraints)
         
         let initialPriceStackConstraints = [
             initialPriceStack.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 6),
-            initialPriceStack.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: AiqConstraints.Leading.standard),
+            initialPriceStack.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: AiqConstraints.OrderItemForm.Leading.standard),
         ]
         NSLayoutConstraint.activate(initialPriceStackConstraints)
         
         let descriptionLabelConstraints = [
             descriptionLabel.topAnchor.constraint(equalTo: initialPriceStack.bottomAnchor, constant: 6),
-            descriptionLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: AiqConstraints.Leading.standard),
-            descriptionLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: AiqConstraints.Trailing.standard),
+            descriptionLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: AiqConstraints.OrderItemForm.Leading.standard),
+            descriptionLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: AiqConstraints.OrderItemForm.Trailing.standard),
         ]
         NSLayoutConstraint.activate(descriptionLabelConstraints)
     }

@@ -9,6 +9,7 @@ struct OrderItemFormField {
     let type: OrderItemFormFieldType
     let title: String
     let description: String
+    let isRequired: Bool
     let options: [OrderItemFormFieldOption]
 }
 

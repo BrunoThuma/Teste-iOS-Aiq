@@ -8,12 +8,17 @@
 import Foundation
 
 enum AiqConstraints {
-    enum Leading {
-        static let standard: CGFloat = 16.0
+    enum OrderItemForm {
+        enum Leading {
+            static let standard: CGFloat = 16.0
+        }
+        
+        enum Trailing {
+            static let standard: CGFloat = -16.0
+        }
+        
+        enum Top {
+            static let standard: CGFloat = -16.0
+        }
     }
-    
-    enum Trailing {
-        static let standard: CGFloat = -16.0
-    }
-    
 }

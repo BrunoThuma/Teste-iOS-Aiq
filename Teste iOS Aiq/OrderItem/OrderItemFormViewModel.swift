@@ -59,6 +59,7 @@ class MockedOrderItemVM: OrderItemVMProtocol {
                     type: .singleChoice,
                     title: "qual o tamanho?",
                     description: "escolha 1",
+                    isRequired: true,
                     options: [
                         OrderItemFormFieldOption(
                             title: "médio",
@@ -76,6 +77,7 @@ class MockedOrderItemVM: OrderItemVMProtocol {
                     type: .multipleItems,
                     title: "vai querer bebida?",
                     description: "escolha quantos quiser",
+                    isRequired: false,
                     options: [
                         OrderItemFormFieldOption(
                             title: "coca-cola",
@@ -97,6 +99,7 @@ class MockedOrderItemVM: OrderItemVMProtocol {
                     type: .singleChoice,
                     title: "precisa de talher?",
                     description: "escolha até 1",
+                    isRequired: false,
                     options: [
                         OrderItemFormFieldOption(
                             title: "hashi",
@@ -112,6 +115,7 @@ class MockedOrderItemVM: OrderItemVMProtocol {
                     type: .multipleChoice,
                     title: "mais alguma coisa?",
                     description: "escolha até 2",
+                    isRequired: false,
                     options: [
                         OrderItemFormFieldOption(
                             title: "biscoito da sorte",

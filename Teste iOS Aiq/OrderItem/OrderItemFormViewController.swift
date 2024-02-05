@@ -27,6 +27,13 @@ class OrderItemFormViewController: UIViewController {
     
     override func loadView() {
         super.loadView()
+        
+        let fominhaImage = UIImage(named: "icon roxo.svg")?.withTintColor(.white, renderingMode: .alwaysOriginal)
+        self.navigationItem.leftBarButtonItem = .init(image: fominhaImage, style: .plain, target: nil, action: nil)
+        
+//        self.navigationItem.titleView = OrderItemFormTitleView()
+        
+        
         view = OrderItemFormView()
         guard let view = view as? OrderItemFormView else { return }
         
@@ -34,13 +41,12 @@ class OrderItemFormViewController: UIViewController {
         view.formTitleView.itemImageView.image = viewModel.form?.itemImage
         view.formTitleView.initialPriceValueLabel.text = viewModel.form?.initialPrice.priceDescription
         view.formTitleView.descriptionLabel.text = viewModel.form?.description
+        view.formFieldsTableView.dataSource = self
         
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        print("\(Double.random(in: (0...1000.0)).priceDescription) success")
     }
 
 }
@@ -48,7 +54,8 @@ class OrderItemFormViewController: UIViewController {
 extension OrderItemFormViewController: OrderItemFormVMDelegate {
     
     func didGetForm() {
-        print("Got form")
+        guard let view = view as? OrderItemFormView else { return }
+        view.formFieldsTableView.reloadData()
     }
     
     func didGetError(error: String) {
@@ -62,9 +69,19 @@ extension OrderItemFormViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "FormCell", for: indexPath)
         let formField = self.viewModel.form!.formFields[indexPath.row]
-        cell.textLabel!.text = formField.title
+        var typeMessage: String = ""
+        switch formField.type {
+        case .singleChoice:
+            typeMessage = "singleChoice"
+        case .multipleChoice:
+            typeMessage = "multipleChoice"
+        case .multipleItems:
+            typeMessage = "multipleItems"
+        }
+        
+        cell.textLabel!.text = formField.title + typeMessage
         return cell
     }
     

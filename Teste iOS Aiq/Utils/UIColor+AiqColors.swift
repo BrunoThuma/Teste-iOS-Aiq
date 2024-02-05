@@ -28,12 +28,19 @@ extension UIColor{
         enum OrderItemForm {
             enum Header {
                 static let backgroundPurple = FigmaColors.purple500Brand
+                static let deliverToTintPurple = FigmaColors.purple200Light
             }
             enum Summary {
                 static let titleTintBlack = FigmaColors.neutrals700TextMedium
                 static let initialPriceTintGray = FigmaColors.neutrals500TextSecondary
                 static let initialPriceValueTintPurple = FigmaColors.purple500Brand
                 static let descriptionTintGray = FigmaColors.neutrals500TextSecondary
+            }
+            enum Quantity {
+                static let howManyTintBlack = FigmaColors.neutrals700TextMedium
+                static let totalValueTintBlack = FigmaColors.neutrals700TextMedium
+                static let totalPriceTintGray = FigmaColors.neutrals700TextMedium
+                static let blockedBgGray = FigmaColors.neutrals500TextSecondary
             }
         }
     }

@@ -38,7 +38,7 @@ Para mais informações consultar o [manual oficial do gitflow](https://www.atla
 - [x] Divisão das pastas para MVVM
 - [x] Definição do modelo de dados
 - [ ] Contrução basica da tela
-  - [ ] TableView diferenciando cada tipo de campo
+  - [x] TableView diferenciando cada tipo de campo
   - [ ] Header com Endereço de destino, imagem e infos do item
   - [ ] Footer com TextField para observações e botão de finalizar
 - [ ] Contrução da celula de cada tipo de campo 
