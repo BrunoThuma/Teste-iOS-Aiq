@@ -13,8 +13,7 @@ protocol OrderItemVMProtocol: AnyObject {
     var form: OrderItemForm? { get }
     var controllerDelegate: OrderItemFormVMDelegate! { get set }
     
-    func getFormInfo() -> OrderItemForm
-    func getFormTableData() -> [OrderItemFormField]
+    func loadModel()
 }
 
 protocol OrderItemFormVMDelegate: AnyObject {
@@ -31,7 +30,7 @@ class MockedOrderItemVM: OrderItemVMProtocol {
         if let form {
             return form
         } else {
-            loadForm()
+            loadModel()
             return form!
         }
     }
@@ -41,13 +40,13 @@ class MockedOrderItemVM: OrderItemVMProtocol {
         if let form {
             return form.formFields
         } else {
-            loadForm()
+            loadModel()
             return form!.formFields
         }
     }
     
     // TODO: Should throw
-    func loadForm() {
+    func loadModel() {
         self.form = OrderItemForm(
             id: 1,
             title: "Ceviche de salmão",

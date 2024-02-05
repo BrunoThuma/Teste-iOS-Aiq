@@ -17,6 +17,8 @@ class OrderItemFormViewController: UIViewController {
         super.init(nibName: nil, bundle: nil)
         
         viewModel.controllerDelegate = self
+        
+        viewModel.loadModel()
     }
     
     required init?(coder: NSCoder) {
@@ -28,16 +30,17 @@ class OrderItemFormViewController: UIViewController {
         view = OrderItemFormView()
         guard let view = view as? OrderItemFormView else { return }
         
-        view.titleLabel.text = viewModel.getFormInfo().title
-        view.itemImageView.image = viewModel.getFormInfo().itemImage
-        view.initialPriceValueLabel.text = viewModel.form?.initialPrice.description
+        view.formTitleView.titleLabel.text = viewModel.form?.title
+        view.formTitleView.itemImageView.image = viewModel.form?.itemImage
+        view.formTitleView.initialPriceValueLabel.text = viewModel.form?.initialPrice.priceDescription
+        view.formTitleView.descriptionLabel.text = viewModel.form?.description
         
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        print("\(Double.random(in: (0...100.0)).priceDescription) success")
+        print("\(Double.random(in: (0...1000.0)).priceDescription) success")
     }
 
 }
@@ -55,12 +58,12 @@ extension OrderItemFormViewController: OrderItemFormVMDelegate {
 
 extension OrderItemFormViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return viewModel.getFormTableData().count
+        return viewModel.form!.formFields.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
-        let formField = self.viewModel.getFormTableData()[indexPath.row]
+        let formField = self.viewModel.form!.formFields[indexPath.row]
         cell.textLabel!.text = formField.title
         return cell
     }
