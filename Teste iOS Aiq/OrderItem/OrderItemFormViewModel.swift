@@ -47,3 +47,6 @@ class MockedOrderItemVM: OrderItemVMProtocol {
         }
     }
 }
+
+/// Figma purple200
+let purple = 12
